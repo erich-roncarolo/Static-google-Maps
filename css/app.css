@@ -1,0 +1,12 @@
+h1 {
+	text-align: center;
+}
+
+.wrap {
+	width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #333;
+	background: #f9ffd9;
+	border-radius: 10px;
+}
