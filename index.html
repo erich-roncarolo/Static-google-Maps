@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google maps</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="js/map.js"></script>
+</head>
+<body>
+
+<h1>Google</h1>
+
+
+<div class="wrap">
+
+  <a class="liveMap" target="_blank" href="#"><img id="staticMap" src="" alt=""/></a>
+  <p>Address: 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States</p>
+</div>
+
+<script type="text/javascript">
+
+  var url = $.staticMap({
+    markerIcon: 'http://tinyurl.com/2ftvtt6',
+    address: '1600 Amphitheatre Parkway, Mountain View, CA 94043, United States',
+    width: 500,
+    height:400,
+    zoom: 13
+  });
+  $('#staticMap').attr('src', url);
+
+  var urlLive = $.liveMapLink({
+  	address: "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
+    zoom: 12
+  });
+
+  $('.liveMap').attr('href', urlLive);
+
+
+</script>
+
+
+</body>
+</html>
