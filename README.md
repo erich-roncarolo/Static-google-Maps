@@ -5,7 +5,7 @@ Very Simple jQuery plugin for generating url for static google map and url for l
 
 ##Usage:
 
-####[Demo](http://rubiklabs.com/shved/github/Static-google-Maps/)
+####[Demo](http://shved.me/git/Static-google-Maps/)
 ###Description
 
 - "$staticMap" plugin, generate a link to static google map.
