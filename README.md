@@ -19,6 +19,7 @@ Very Simple jQuery plugin for generating url for static google map and url for l
 
 ###JS
 
+####Example 1
 ```
 //Static map image link
 var url = $.staticMap({
@@ -38,6 +39,7 @@ var urlLive = $.liveMapLink({
 $('.liveMap').attr('href', urlLive);
 ```
 
+####Example 2
 ```
 //Static map image link
 $('#staticMap').staticMap({
