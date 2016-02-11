@@ -10,30 +10,89 @@
 
 <h1>Google</h1>
 
-
+<h2>Map + static direction</h2>
 <div class="wrap">
+  <a class="liveMap1" target="_blank" href="#"><img id="staticMap1" src="" alt=""/></a>
+  <p>Address: 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</p>
+  <p>Origin: San Francisco, United States</p>
+</div>
 
-  <a class="liveMap" target="_blank" href="#"><img id="staticMap" src="" alt=""/></a>
-  <p>Address: 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States</p>
+<h2>Map + geolocated direction</h2>
+<div class="wrap">
+  <a class="liveMap2" target="_blank" href="#"><img id="staticMap2" src="" alt=""/></a>
+  <p>Address: 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</p>
+  <p>Origin: (geolocated)</p>
+</div>
+
+<h2>Geolocated map + unknown origin</h2>
+<div class="wrap">
+  <a class="liveMap3" target="_blank" href="#"><img id="staticMap3" src="" alt=""/></a>
+  <p>Address: (geolocated)</p>
+  <p>Fallback: 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</p>
+</div>
+
+<h2>Geolocated map and destination + known origin</h2>
+<div class="wrap">
+  <a class="liveMap4" target="_blank" href="#"><img id="staticMap4" src="" alt=""/></a>
+  <p>Address: (geolocated)</p>
+  <p>Fallback & Origin: San Francisco, United States</p>
 </div>
 
 <script type="text/javascript">
 
   var url = $.staticMap({
-    markerIcon: 'http://tinyurl.com/2ftvtt6',
+    markerIcon: '//tinyurl.com/2ftvtt6',
     address: '1600 Amphitheatre Parkway, Mountain View, CA 94043, United States',
     width: 500,
     height:400,
     zoom: 13
   });
-  $('#staticMap').attr('src', url);
+  $('#staticMap1').attr('src', url);
 
   var urlLive = $.liveMapLink({
   	address: "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
+    origin: 'San Francisco, United States'
+  });
+
+  $('.liveMap1').attr('href', urlLive);
+
+  $('#staticMap2').staticMap({
+    address: '1600 Amphitheatre Parkway, Mountain View, CA 94043, United States',
+    width: 500,
+    height:400,
     zoom: 12
   });
 
-  $('.liveMap').attr('href', urlLive);
+  $('.liveMap2').liveMapLink({
+  	address: "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
+    geoloc: 'origin'
+  });
+
+  $('#staticMap3').staticMap({
+    address: '1600 Amphitheatre Parkway, Mountain View, CA 94043, United States',
+    width: 500,
+    height:400,
+    zoom: 11,
+	geoloc: true
+  });
+
+  $('.liveMap3').liveMapLink({
+  	address: "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
+    origin: ''
+  });
+
+  $('#staticMap4').staticMap({
+    address: 'San Francisco, United States',
+    width: 500,
+    height:400,
+    zoom: 10,
+	geoloc: true
+  });
+
+  $('.liveMap4').liveMapLink({
+    origin: 'San Francisco, United States',
+	geoloc: 'address'
+  });
 
 
 </script>
