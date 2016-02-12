@@ -5,7 +5,7 @@ Very Simple jQuery plugin for generating url for static google map and url for l
 
 ##Usage:
 
-####[Demo](//cdn.rawgit.com/ShvedDmutro/Static-google-Maps/master/index.html)
+####[Demo](//cdn.rawgit.com/erich-roncarolo/Static-google-Maps/master/index.html)
 ###Description
 
 - "$.staticMap" plugin, generate a link to static google map.
@@ -17,7 +17,7 @@ Very Simple jQuery plugin for generating url for static google map and url for l
 ###Html example
 
 ```
-<a class="liveMap" target="_blank" href="#"><img id="staticMap" src="" alt=""/></a>
+<a id="liveMap" target="_blank" href="#"><img id="staticMap" src="" alt=""/></a>
 ```
 
 ###JS
@@ -39,7 +39,7 @@ var urlLive = $.liveMapLink({
   address: "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
   origin: "San Francisco, United States"
 });
-$('.liveMap').attr('href', urlLive);
+$('#liveMap').attr('href', urlLive);
 ```
 
 ####Example 2 - Plugins set URLs directly
@@ -54,7 +54,7 @@ $('#staticMap').staticMap({
 });
 
 //live map link
-$('.liveMap').liveMapLink({
+$('#liveMap').liveMapLink({
   address: "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
   geoloc: 'origin'
 });
