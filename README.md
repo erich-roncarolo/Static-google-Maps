@@ -42,7 +42,7 @@ var urlLive = $.liveMapLink({
 $('#liveMap').attr('href', urlLive);
 ```
 
-####Example 2 - Plugins set URLs directly
+####Example 2 - Plugins set URLs directly (needed if you want to use geoloc option)
 ```
 //Static map image
 $('#staticMap').staticMap({
