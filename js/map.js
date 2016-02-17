@@ -53,6 +53,7 @@
 		} else {
 			this.attr('src', $.staticMap(options));
 		}
+		return this;
 	}
 
 	$.liveMapLink = function( options ){
@@ -95,6 +96,7 @@
 		} else {
 			this.attr('href', $.liveMapLink(options));
 		}
+		return this;
 	}
 	
 	function logError(error) {
